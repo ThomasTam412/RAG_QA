@@ -1,9 +1,16 @@
 import os
 import re
-from typing import List, Dict, Any
-from PyPDF2 import PdfReader
 import logging
+from typing import List, Dict, Any
 
+# 尝试多种PDF库导入
+try:
+    from pypdf import PdfReader
+except ImportError:
+    try:
+        from PyPDF2 import PdfReader
+    except ImportError:
+        raise ImportError("需要安装 pypdf 或 PyPDF2 库来处理PDF文件")
 logger = logging.getLogger(__name__)
 
 
