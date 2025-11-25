@@ -1,0 +1,13 @@
+# 核心依赖
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.4
+pypdf>=3.17.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Web界面支持
+streamlit>=1.28.0
+
+# 工具类
+numpy>=1.24.0  # FAISS 和 sentence-transformers 需要
+tqdm>=4.65.0   # 进度显示
